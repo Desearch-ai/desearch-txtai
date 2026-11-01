@@ -1,0 +1,22 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "desearch-txtai"
+version = "0.1.0"
+description = "Desearch search pipelines and agent tools for txtai"
+readme = "README.md"
+requires-python = ">=3.10"
+license = "MIT"
+dependencies = ["txtai", "requests"]
+
+[project.optional-dependencies]
+agent = ["txtai[agent]"]
+test = ["pytest", "txtai[agent]"]
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/desearch_txtai"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
