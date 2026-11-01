@@ -6,7 +6,7 @@ A small Desearch search pipeline and agent tool for txtai. Uses
 ## Install
 
 ```bash
-pip install desearch-txtai
+pip install git+https://github.com/Desearch-ai/desearch-txtai
 # From this checkout:
 pip install -e '.[test]'
 ```
@@ -50,7 +50,7 @@ status when available. Transport failures and invalid JSON also raise this error
 Install txtai's agent dependencies first:
 
 ```bash
-pip install 'desearch-txtai[agent]'
+pip install "desearch-txtai[agent] @ git+https://github.com/Desearch-ai/desearch-txtai"
 ```
 
 ```python
